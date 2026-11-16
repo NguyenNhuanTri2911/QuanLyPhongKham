@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="28dp">
+
+            <!-- Curved Gradient Hero Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header_hero"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="22dp"
+                android:paddingBottom="44dp">
+
+                <!-- Top Row: User Greeting + Notification Glass Button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_squircle_white_glass">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_user"
+                            app:tint="@color/white" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Xin chào ngày mới,"
+                            android:textColor="#DBEAFE"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvPatientName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nguyễn Văn Bệnh Nhân"
+                            android:textColor="@color/white"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNotifications"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_badge_glass"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="40dp"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp"
+                        android:text="Thông báo"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_bell"
+                        app:iconGravity="textStart"
+                        app:iconPadding="6dp"
+                        app:iconSize="16dp"
+                        app:iconTint="@color/white" />
+                </LinearLayout>
+
+                <!-- AI Triage Floating Hero Banner inside Header -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardAiBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#4DFFFFFF"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_ai_banner"
+                        android:orientation="vertical"
+                        android:padding="18dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:background="@drawable/bg_squircle_white_glass">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_ai_sparkle"
+                                    app:tint="@color/white" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_badge_glass"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="2dp"
+                                    android:text="AI MEDICAL TRIAGE"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Trợ lý Y tế AI Chẩn đoán"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Mô tả triệu chứng để hệ thống AI phân loại mức độ khẩn cấp và gợi ý đúng chuyên khoa."
+                            android:textColor="#E0F2FE"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnOpenAi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minHeight="42dp"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="9dp"
+                            android:text="Bắt đầu chẩn đoán AI →"
+                            android:textAllCaps="false"
+                            android:textColor="@color/medical_blue_dark"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="12dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Overlapping Quick Action Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="-26dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/border_gray"
+                    app:strokeWidth="1dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBookByDept"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Đặt theo Khoa"
+                        android:textAllCaps="false"
+                        android:textColor="@color/medical_blue_dark"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_doctor"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/medical_blue" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/border_gray"
+                    app:strokeWidth="1dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBookByDate"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Đặt theo Ngày"
+                        android:textAllCaps="false"
+                        android:textColor="@color/medical_teal_dark"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_calendar"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/medical_teal" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Main Content Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="18dp">
+
+                <!-- Section 1: Upcoming Appointment -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lịch khám sắp tới"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewAllAppointments"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="36dp"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:text="Xem tất cả →"
+                        android:textAllCaps="false"
+                        android:textColor="@color/medical_blue"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutUpcomingAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical" />
+
+                <!-- Section 2: Specialties Horizontal Scroll -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Chuyên khoa tiêu biểu"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/layoutDepartmentsRow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+
+                <!-- Section 3: Featured Doctors -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Bác sĩ chuyên khoa đầu ngành"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutFeaturedDoctors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <!-- Section 4: Recent AI Triage History -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Lịch sử tư vấn AI gần đây"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/border_gray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutRecentAiHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Modern Elevated Bottom Navigation Bar -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="68dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="12dp"
+        app:strokeColor="@color/border_gray"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="66dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navHome"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="6dp"
+                android:text="Trang chủ"
+                android:textAllCaps="false"
+                android:textColor="@color/medical_blue"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_home"
+                app:iconGravity="top"
+                app:iconPadding="3dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/medical_blue" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navAi"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="6dp"
+                android:text="Trợ lý AI"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_ai_sparkle"
+                app:iconGravity="top"
+                app:iconPadding="3dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/text_secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navAppointments"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="6dp"
+                android:text="Lịch hẹn"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="top"
+                app:iconPadding="3dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/text_secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navMedications"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="6dp"
+                android:text="Đơn thuốc"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_pill"
+                app:iconGravity="top"
+                app:iconPadding="3dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/text_secondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navProfile"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="6dp"
+                android:text="Hồ sơ"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_user"
+                app:iconGravity="top"
+                app:iconPadding="3dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/text_secondary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
