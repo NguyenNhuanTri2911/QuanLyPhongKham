@@ -1,3 +1,58 @@
 <resources>
-    <string name="app_name">QuanLyPhongKham</string>
+    <string name="app_name">HealthMate</string>
+    <string name="app_slogan">Hệ thống Đặt lịch Khám &amp; Trợ lý Y tế AI</string>
+
+    <!-- Xác thực (Auth) -->
+    <string name="login_title">Đăng nhập HealthMate</string>
+    <string name="login_subtitle">Chăm sóc sức khỏe thông minh 24/7</string>
+    <string name="hint_identifier">Số điện thoại hoặc Email</string>
+    <string name="hint_password">Mật khẩu (tối thiểu 6 ký tự)</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="btn_register_now">Chưa có tài khoản? Đăng ký ngay</string>
+    <string name="btn_config_db">Cấu hình kết nối SQL Server</string>
+
+    <string name="register_title">Đăng ký Tài khoản Bệnh nhân</string>
+    <string name="hint_full_name">Họ và tên đầy đủ</string>
+    <string name="hint_phone">Số điện thoại (10 chữ số)</string>
+    <string name="hint_email">Địa chỉ Email</string>
+    <string name="hint_dob">Ngày sinh (YYYY-MM-DD)</string>
+    <string name="hint_address">Địa chỉ liên hệ</string>
+    <string name="hint_confirm_password">Nhập lại mật khẩu</string>
+    <string name="label_gender">Giới tính</string>
+    <string name="gender_male">Nam</string>
+    <string name="gender_female">Nữ</string>
+    <string name="btn_submit_register">Hoàn tất Đăng ký</string>
+
+    <!-- Trang chủ & Phân hệ Bệnh nhân -->
+    <string name="patient_home_greeting">Xin chào,</string>
+    <string name="ai_banner_badge">TRỢ LÝ Y TẾ AI 24/7</string>
+    <string name="ai_banner_title">Chẩn đoán triệu chứng &amp; Gợi ý khoa khám</string>
+    <string name="ai_banner_desc">Đối sánh triệu chứng với CSDL tri thức y khoa trên SQL Server</string>
+    <string name="ai_screen_title">Trợ lý Y tế AI</string>
+    <string name="select_dept_title">Chọn Chuyên khoa Khám</string>
+    <string name="doctor_list_title">Danh sách Bác sĩ</string>
+    <string name="booking_by_date_title">Đặt lịch Khám theo Ngày</string>
+    <string name="booking_title">Đặt lịch Khám bệnh</string>
+    <string name="appointments_title">Quản lý Lịch hẹn</string>
+    <string name="medications_title">Đơn thuốc &amp; Nhắc thuốc</string>
+    <string name="prescription_detail_title">Chi tiết Đơn thuốc &amp; Hẹn giờ</string>
+    <string name="patient_profile_title">Hồ sơ Sức khỏe Cá nhân</string>
+    <string name="notification_title">Thông báo Hệ thống</string>
+
+    <!-- Phân hệ Bác sĩ -->
+    <string name="doctor_home_title">Bảng điều khiển Bác sĩ</string>
+    <string name="doctor_schedule_title">Lịch trực &amp; Đăng ký Ca trực</string>
+    <string name="doctor_patients_title">Danh sách Bệnh nhân Khám</string>
+    <string name="doctor_examine_title">Khám bệnh &amp; Bệnh sử</string>
+    <string name="doctor_prescription_title">Kê Đơn thuốc Điện tử</string>
+    <string name="doctor_profile_title">Hồ sơ Chuyên môn Bác sĩ</string>
+
+    <!-- Phân hệ Admin -->
+    <string name="admin_dashboard_title">Quản trị Hệ thống (Admin)</string>
+    <string name="admin_doctors_title">Quản lý Đội ngũ Bác sĩ</string>
+    <string name="admin_patients_title">Quản lý Hồ sơ Bệnh nhân</string>
+    <string name="admin_departments_title">Quản lý Chuyên khoa</string>
+    <string name="admin_rooms_title">Quản lý Phòng khám</string>
+    <string name="admin_schedules_title">Duyệt Lịch trực &amp; Xếp phòng</string>
+    <string name="admin_appointments_title">Giám sát Toàn bộ Lịch hẹn</string>
 </resources>

@@ -1,7 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.QuanLyPhongKham" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <style name="Base.Theme.AppHealthMate" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/medical_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/medical_blue_light</item>
+        <item name="colorSecondary">@color/medical_teal</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="android:statusBarColor">@color/medical_blue_deep</item>
+        <item name="android:windowBackground">@color/bg_screen</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
     </style>
 </resources>
